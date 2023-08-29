@@ -16,5 +16,5 @@ services:
   db:
     image: "alpine:latest"
     volumes:
-      - ./path/to/your/football.db:/app/football.db  # Prilagodite putanju do vaše SQLite datoteke
+      - ./path/to/your/football.db:/app/football.db  # Prilagođavanje putanje do vaše SQLite datoteke
     command: ["tail", "-f", "/dev/null"]  # Držimo kontejner aktivnim bez da izvršavamo bilo šta

@@ -76,14 +76,14 @@ class League(Base):
 Team.league_id = Column(Integer, ForeignKey('leagues.id'))
 Team.league = relationship('League', back_populates='teams')
 
-# Ovdje definirajte putanju prema svojoj bazi podataka
+# Ovdje definiramo putanju prema svojoj bazi podataka
 db_path = 'sqlite:///football.db'
 engine = create_engine(db_path)
 
 # Kreiranje tablica u bazi podataka
 Base.metadata.create_all(engine)
 
-# Stvorite sesiju za interakciju s bazom podataka
+# Stvaranje sesije za interakciju s bazom podataka
 Session = sessionmaker(bind=engine)
 session = Session()
 
